@@ -1,0 +1,217 @@
+/* Adiciona rolagem suave para âncoras */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #2a263f;
+    color: #e0d6ff; /* Cor de texto mais clara para melhor contraste */
+}
+
+/* Estilizando o cabeçalho */
+header {
+    background-color: #1f176d;
+    color: #fff; /* Cor do título branca para melhor leitura */
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Centralizando o conteúdo principal */
+main {
+    width: 80%;
+    margin: 20px auto; /* Adiciona margem no topo/baixo e centraliza horizontalmente */
+    padding: 20px;
+    background-color: #27135f;
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilizando as seções dentro do main */
+main section {
+    margin-bottom: 40px; /* Espaçamento entre as seções */
+}
+
+/* Estilizando o menu de navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #4a3a9a; /* Efeito ao passar o mouse */
+}
+
+/* Estilizando a lista do cardápio */
+#cardapio ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+    display: flex; /* Ativa o Flexbox */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 20px; /* Espaçamento entre os cards de pizza */
+    justify-content: center; /* Centraliza os cards */
+}
+
+/* Estilizando cada item da pizza no cardápio */
+#cardapio li {
+    background-color: #2a263f; /* Cor de fundo para destacar o item */
+    padding: 15px;
+    border-radius: 5px;
+    flex: 1 1 45%; /* Define o tamanho dos itens para criar duas colunas */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de hover */
+}
+
+/* Efeito de zoom ao passar o mouse sobre os cards de pizza */
+#cardapio li:hover {
+    transform: scale(1.05);
+}
+
+/* Estilizando o rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilizando os links de redes sociais no rodapé */
+.social-links {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #e0d6ff; /* Cor de destaque do tema */
+}
+
+/* Estilizando as imagens das pizzas no cardápio */
+#cardapio li img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Bordas arredondadas para as imagens */
+    margin-top: 10px; /* Espaçamento entre o texto e a imagem */
+}
+
+/* Media Query para telas menores (design responsivo) */
+@media (max-width: 768px) {
+    /* Ajusta a largura do conteúdo principal para telas menores */
+    main {
+        width: 95%;
+        padding: 15px;
+    }
+
+    /* Faz com que os itens do cardápio ocupem a largura total (uma coluna) */
+    #cardapio li {
+        flex: 1 1 100%;
+    }
+}
+
+/* Estilos para o formulário de contato */
+#contato form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os elementos do formulário */
+}
+
+#contato form h3 {
+    margin-bottom: 0;
+}
+
+#contato input,
+#contato textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #4a3a9a;
+    border-radius: 5px;
+    background-color: #2a263f;
+    color: #e0d6ff;
+    box-sizing: border-box; /* Garante que padding não afete a largura total */
+    font-family: inherit; /* Usa a mesma fonte do site */
+}
+
+#contato button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a3a9a;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start; /* Impede que o botão estique 100% */
+}
+
+#contato button:hover {
+    background-color: #6954c9; /* Um tom mais claro ao passar o mouse */
+}
+
+/* Estilo para os links de troca de formulário (Login/Registro) */
+.toggle-form-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.toggle-form-link a {
+    color: #a18dff;
+    text-decoration: none;
+}
+/* Estilos para o botão "Voltar ao Topo" */
+.voltar-topo {
+    display: none; /* Começa escondido */
+    position: fixed; /* Posição fixa na tela */
+    bottom: 25px;
+    right: 25px;
+    z-index: 99; /* Garante que fique sobre outros elementos */
+    background-color: #4a3a9a;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Deixa o botão redondo */
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.voltar-topo:hover {
+    background-color: #6954c9;
+}
+
+/* Estilos para validação do formulário */
+.error-message {
+    color: #ff8a8a;
+    font-size: 0.9em;
+    min-height: 1em; /* Evita que o layout "pule" */
+}
+
+input.invalid,
+textarea.invalid {
+    border-color: #ff8a8a;
+}
